@@ -1,0 +1,56 @@
+.gallery-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.4rem;
+}
+
+.gallery-button {
+  background-color: #F6A9F7;
+  margin: 0.2rem;
+
+  &:hover {
+    background-color: #F7F683;
+  }
+}
+
+.gallery-images-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  gap: 0.3rem;
+}
+
+.image-gallery {
+  cursor: pointer;
+  border: 1rem;
+  width: 120px;
+  height: 120px;
+}
+
+.image-selected {
+  border: 0.2rem red solid;
+}
+
+.image-selected-scale-1 {
+  transform: scale(0.5);
+}
+
+.image-selected-scale-2 {
+  transform: scale(0.75);
+}
+
+.image-selected-scale-3 {
+  transform: scale(1);
+}
+
+.image-selected-scale-4 {
+  transform: scale(1.25);
+  margin: 2rem;
+}
+
+.image-selected-scale-5 {
+  transform: scale(1.5);
+  margin: 4rem;
+}

@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="header">
+    <mat-icon>mood</mat-icon>
+    <span>4.2 Angular Lab</span>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <app-public-menu *ngIf="!isLogin" class="max-width"></app-public-menu>
+    <app-private-menu *ngIf="isLogin" class="max-width" [title]="titleUser"></app-private-menu>
+  </mat-toolbar-row>
+</mat-toolbar>

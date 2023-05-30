@@ -1,0 +1,9 @@
+.menu-bar,
+.submenu-bar {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu-bar {
+  justify-content: space-between;
+}

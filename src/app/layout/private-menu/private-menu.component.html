@@ -1,0 +1,27 @@
+<div class="menu-bar">
+  <div class="submenu-bar">
+    <a mat-fab extended matTooltip="Dashboard" routerLink="/dashboard" aria-label="dashboard">
+      <mat-icon>dashboard</mat-icon>
+      Dashboard
+    </a>
+    <a mat-fab extended matTooltip="Gallery" routerLink="/gallery" aria-label="gallery">
+      <mat-icon>photo_library</mat-icon>
+      Gallery
+    </a>
+    <a mat-fab extended matTooltip="Crud" routerLink="/crud" aria-label="crud">
+      <mat-icon>auto_awesome</mat-icon>
+      CRUD
+    </a>
+  </div>
+  <div class="submenu-bar">
+    <span>{{title}}</span>
+    <a mat-fab extended matTooltip="Profile" routerLink="/profile" aria-label="profile">
+      <mat-icon>person</mat-icon>
+      Profile
+    </a>
+    <button mat-fab extended matTooltip="Logout" aria-label="home" (click)="submit()">
+      <mat-icon>logout</mat-icon>
+      Logout
+    </button>
+  </div>
+</div>

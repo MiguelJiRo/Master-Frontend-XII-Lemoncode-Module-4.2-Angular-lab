@@ -1,0 +1,34 @@
+<div class="gallery-buttons-container gallery-center">
+  <button color="secundary" class="gallery-button" [disabled]="disableBefore" (click)="decreaseValue()"
+    mat-button>Before</button>
+  <button color="secundary" class="gallery-button" [disabled]="disableNext" (click)="increaseValue()"
+    mat-button>Next</button>
+  <button color="secundary" class="gallery-button" (click)="makeBigger()" [disabled]="biggerButton" mat-button>Zoom
+    in</button>
+  <button color="secundary" class="gallery-button" (click)="resetSizeImage()" [disabled]="resetButton" mat-button>Reset
+    zoom</button>
+  <button color="secundary" class="gallery-button" (click)="makeSmaller()" [disabled]="smallerButton" mat-button>Zoom
+    out</button>
+  <button color="secundary" class="gallery-button" [disabled]="playButton" (click)="playGallery()"
+    mat-button>Play</button>
+  <button color="secundary" class="gallery-button" [disabled]="stopButton" (click)="stopGallery()"
+    mat-button>Stop</button>
+</div>
+<div class="gallery-buttons-container gallery-center">
+  <button color="secundary" class="gallery-button" [disabled]="disableBeforePage" (click)="changePage(false)"
+    mat-button>Before page</button>
+  <button color="secundary" class="gallery-button" [disabled]="disableNextPage" (click)="changePage(true)"
+    mat-button>Next page</button>
+</div>
+<div class="gallery-center">
+  <img class="select-image image-selected-scale-{{currentScale}}" src='{{currentImage.src}}' id="image-selected"
+    height="200" />
+</div>
+
+<div class="gallery-images-container">
+  <div *ngFor="let item of slicedData(images)">
+    <img [src]="item.src" (click)="clickImage(item)" class="{{
+      item.id === currentImage.id ? 'image-gallery image-selected' : 'image-gallery'
+    }}" id="{{item.id}}" height="300">
+  </div>
+</div>

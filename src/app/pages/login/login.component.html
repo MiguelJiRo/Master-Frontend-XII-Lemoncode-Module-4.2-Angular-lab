@@ -1,0 +1,28 @@
+<mat-card class="login-card">
+  <mat-card-title>{{title}}</mat-card-title>
+  <mat-card-content>
+    <form #addForm="ngForm" (ngSubmit)="submit()">
+      <div style="margin: 0.1rem;">
+        <input type="text" matInput placeholder="Username" [(ngModel)]="member.username"
+          [ngModelOptions]="{standalone: true}">
+      </div>
+      <div style="margin: 0.1rem;">
+        <input type="password" matInput placeholder="Password" [(ngModel)]="member.password"
+          [ngModelOptions]="{standalone: true}">
+      </div>
+
+      <div *ngIf="errorLogin" class="error">
+        <span>{{ error }}</span>
+        <span>user: {{ errorUser }}</span>
+        <span>password: {{ errorPassword }}</span>
+      </div>
+
+      <div class="button" class="login-button-container">
+        <button type="submit" color="secundary" class="login-button" mat-button>Login</button>
+      </div>
+    </form>
+    <div class="spinner-login">
+      <mat-spinner *ngIf="spinnerOn"></mat-spinner>
+    </div>
+  </mat-card-content>
+</mat-card>
